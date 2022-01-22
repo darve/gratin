@@ -2,14 +2,11 @@
 const extract_css = require('mini-css-extract-plugin');
 const path = require('path');
 
-const lad_index = process.argv.indexOf('--lad')+1;
-const lad_name = process.argv[lad_index]
-
 module.exports = {
   watch: true,
   output: {
     path: path.resolve(__dirname, './public/pub'),
-    filename: `${lad_name}.js`
+    filename: `app.js`
   },
   module: {
     rules: [
@@ -34,7 +31,7 @@ module.exports = {
   },
   plugins: [
     new extract_css({
-      filename: `${lad_name}.css`,
+      filename: `app.css`,
       chunkFilename: 'chunk.css',
     })
   ],

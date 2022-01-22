@@ -38,8 +38,8 @@
   },
   "scripts": {
     "serve": "node index.js",
-    "app": "npx webpack --config webpack.config.js app/index.js --mode development --lad app",
-    "prod": "npx webpack --config webpack.config.js app/index.js --mode production --lad app",
+    "app": "npx webpack ./app/index.js --config webpack.config.js --mode development",
+    "prod": "npx webpack ./app/index.js --config webpack.config.js --mode production",
     "heroku-prebuild": "echo hej",
     "heroku-postbuild": "echo hej",
     "content": "nodemon --watch content -e md,js,json build.js"
